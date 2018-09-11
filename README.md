@@ -15,3 +15,4 @@ Everything that has been covered this week has been something new that I learned
 
 ##### 5.
 I have yet to help out fellow classmates as I am also learning and not confident in my knowledge of this material just yet. I do not want to be a person that gives somebody else the wrong information leading them to failure in the course. However, I have given feedback and input about what I think.
+
