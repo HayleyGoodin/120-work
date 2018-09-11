@@ -5,7 +5,7 @@ function setup() {
   // this is a canvas line with dimensions (200, 200)
 
   background( 200 );
-  // this is a greyscale background color, should be light grey
+  // this is a greyscale background color, should be a light grey
 
 }
 
