@@ -18,3 +18,9 @@ I personally think the class is moving at a very good pace, a lot of this is ver
 
 #### 5
 I haven't helped any classmates yet so far, but from what I learned trying to fix my own mess of files I feel I could help with some of these issues that I also faced.  
+
+### Final Sketch
+
+This is what my final sketch looked like.
+
+![this is my final Hw-3 Sketch](images/W3Image.png)
