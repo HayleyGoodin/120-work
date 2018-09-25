@@ -1,20 +1,19 @@
-var shapeA = 70;
-var shapeB = 130;
-var shapeC = 120;
-var shapeD = 20;
-var shapeE = 0;
-var shapeF = 182;
-var shapeG = 177;
-var shapeH = 30;
-var shapeI = 20;
-var shapeJ = 25;
-var shapeK = 130;
-var shapeL = 130;
-var shapeM = 125;
-var shapeN = 100;
-var shapeO = 95;
-var shapeP = 102;
-var shapeQ = 105;
+var shapeA = 70;   //Body
+var shapeB = 130;  //Head
+var shapeC = 120;  //FrontArm
+var shapeD = 20;   //FrontThigh
+var shapeE = 0;    //BottomFoot
+var shapeF = 182;  //BottomEar
+var shapeG = 177;  //TopEar
+var shapeH = 30;   //BackThigh
+var shapeI = 20;   //Tail
+var shapeJ = 25;   //TopFoot
+var shapeK = 130;  //Eye
+var shapeL = 130;  //Pupil
+var shapeM = 125;  //TinyNose
+var shapeN = 100;  //BackArm
+var shapeO = 95;   //Hand
+var shapeP = 102;  //Thumb
 
 
 function setup() {
@@ -29,7 +28,7 @@ function draw() {
   background( 'lightblue');
 
   fill('blue');
-  rect( 0, 280, 1280, 100 );
+  rect( 0, 280, 1280, 100 ); //Water
 
   fill('teal');
   ellipse(shapeH, 230, 50, 50); //BackThigh
@@ -56,7 +55,7 @@ function draw() {
   shapeB = shapeB + 1
 
   fill('white');
-  ellipse(shapeK, 240, 30); //TopEye
+  ellipse(shapeK, 240, 30); //Eye
   shapeK = shapeK + 1
 
   fill('black');
@@ -67,10 +66,6 @@ function draw() {
   } else {
     ellipse(shapeL, 235, 2);
   }
-
-  fill('black');
-  ellipse(shapeQ, 225, 1, 20);
-  shapeQ = shapeQ + 1
 
   fill('black');
   ellipse(shapeM, 210, 5) //TinyNose
@@ -104,8 +99,10 @@ function draw() {
   ellipse(shapeF, 270, 40, 10); //BottomEar
   shapeF = shapeF + 1
 
-  fill('yellow')
-  ellipse(mouseX, 30, mouseY, 30);
+  frameRate(24);
+  fill('grey')
+  line(pmouseX, pmouseY, mouseX, mouseY); //Not sure, mouse follower
+
 
 
 }
