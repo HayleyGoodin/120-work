@@ -1,6 +1,6 @@
 ### Hayley Goodin, Section 50
 
-[Live Sketch Link](Your Live Link)
+[https://hayleygoodin.github.io/120-work/hw-7/]
 
 
 # HW 7
@@ -55,6 +55,4 @@ function mousePressed() {
 
 ## How did you alter the sketch?
 
-<!--
-Please describe how and why you changed the sketch?
--->
+ I altered the sketch by changing the colors of both the canvas and the ellipse. I moved the start of the fall farther away from the corner of the canvas and increased the fall speed. I also increased the speed on the Y axis on the mousePressed command to make the ball move faster up and down. I also added that the background will change to black when clicked and the first circle of the fast moving ball will be the same color as the original background. It makes it look like the ball is breaking through
