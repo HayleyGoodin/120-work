@@ -1,39 +1,36 @@
-var A = 0;
-let ball1 = 40; //ball size
-let Fallx = 600; //where ball falls on x-axis
-let Fally = 0; // where ball starts on y- axis
-let BFx = 1;
-let BFy = 1;
-let BSx = 1;
-let BSy = 5;
-let BOX = 600;
-let Plat1 = 1;
+var balloon = 1000
+var balloon2 = 1300
+var string = 1300
+var foot = 2100
+var haunch = 2280
 
 function setup(){
 
-  createCanvas(windowWidth, windowHeight);
-  background('grey');
-
+    createCanvas( windowWidth, windowHeight);
+    frameRate(100);
 }
 
 function draw(){
 
-  background('grey');
-  fill('teal');
-  rect( mouseX, BOX, 70, 20);
+     background( 'lightblue');
 
-  A = map(mouseX, 0, windowWidth, 0 , 256); // change colors map1
+     fill('red');
+     ellipse( 700, balloon, 500, 600 );
+     balloon = balloon - 1
 
-  fill('Purple');
-  ellipse( Fallx, Fally, ball1, ball1 );
-  Fallx += BFx * BSx;
-  Fally += BFy * BSy;
+     fill('red');
+     rect( 675, balloon2, 40, 40 );
+     balloon2 = balloon2 - 1
 
-  if ( Plat1 > mouseX ) {
-  bounce = -1;
-  }
+     fill('black');
+     rect( 690, string, 5, 800 );
+     string = string - 1
 
-  Plat1 = Plat1 + bounce;
+     fill('grey');
+     ellipse( 660, foot, 300, 100 );
+     foot = foot - 1
 
-
+     fill('grey');
+     ellipse( 680, haunch, 300, 300 );
+     haunch = haunch - 1
 }
