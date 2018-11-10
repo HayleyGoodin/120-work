@@ -1,36 +1,24 @@
-Bubble b1;
-Bubble b2;
+var circle;
 
 function setup() {
-  size( 600, 600 );
+  createCanvas( 600, 600 );
 
-  b1 = new Bubble(10);
-  b2 = new Bubble(10);
+  circle = new Bubble();
 }
 
 function draw() {
-  background(225);
+  background('black');
+  circle.display();
+  circle.ascend();
 }
+function Bubble() {
+    this.x = random(width);
+    this.y = random(height);
 
-  b1.display();
-  b2.display();
-
-}
-
-class Bubble {
-
- float x;
- float y;
-
-  Bubble(){
-    x = width/2;
-    y = height;
-  }
-
-  function display() {
+  this.display = function(){
     stroke('white');
     strokeWeight(2);
     fill('lightBlue');
-    ellipse(x, y, 40, 40);
-  }
+    ellipse(this.x, this.y, 40, 40);
+  };
 }
