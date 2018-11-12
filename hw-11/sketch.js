@@ -20,5 +20,5 @@ function Bubble() {
     strokeWeight(2);
     fill('lightBlue');
     ellipse(this.x, this.y, 40, 40);
-  };
+  }
 }
