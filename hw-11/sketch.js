@@ -12,7 +12,7 @@ function draw() {
   circle.ascend();
 }
 function Bubble() {
-    this.x = random(width);
+    this.x = random(width);   //bubble appears in new spot upon refresh
     this.y = random(height);
 
   this.display = function(){
