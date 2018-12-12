@@ -1,67 +1,79 @@
-//var circle1;
-//var circle2;
-var d = dist(circle1.x, circle.y, circle2.x, circle2.y);
-var Bubbles = [];
+
+var circleArray = [];
 const numOfBubbles = 20;
 
 function setup() {
 
-  createCanvas( 600, 600 );
 
-  circles = new Bubbles(width / 60, height / 60, 50, 'red');
+	createCanvas(windowWidth, 600);
+    let init_x = windowWidth/numOfBubbles;
+	let init_y = 60;
+    let init_rad = 30
+    let init_col = 'lightBlue'
+    for (let i = 0; i < numOfBubbles; i++) {
+		circleArray.push(new Bubble(init_x, init_y,init_rad,init_col));
+        init_x += windowWidth/numOfBubbles
+		// init_x += 100;
+		// if (init_x > width) {
+		// 	init_x = 60;
+		// 	init_y += 100;
+		//}
+	}
 }
+
 
 
 function draw() {
-  background('black');
+	background('black');
+    for (var num = 0; num < circleArray.length; num++) {
+        circleArray[num].display()
+        circleArray[num].update()
 
-  let init_x = 60;
-  let init_y = 60;
-  for ( let i = 0; i < numOfBubbles; i++ ) {
-          Bubbles.push( new Object( init_x, init_y ) );
+        for (var num_other = 0; num_other < circleArray.length; num_other++) {
+            if (num != num_other) {
+                circleArray[num].changeColor(circleArray[num_other]);
+            }
+        }
 
-          init_x += 100;
-        if( init_x > width ) {
-            init_x = 60;
-            init_y += 100;
+    }
+
+}
+
+
+//circle1 = new Bubble(300,300);
+//circle2 = new Bubble(250,250);
+
+
+
+
+function Bubble (x,y,rad,col) {
+	this.posX = x;
+	this.posY = y;
+	this.radius = rad;
+	this.color = col;
+
+	this.display = function() {
+		stroke('white');
+		strokeWeight(2);
+		fill(this.color);
+		ellipse(this.posX, this.posY, this.radius * 2, this.radius * 2);
+
+	}
+
+	this.update = function(other) {
+		this.posX = this.posX + random(-1, 1);
+		this.posY = this.posY + random(-1, 1);
+	}
+
+    this.changeColor = function(other) {
+        d = dist(this.posX, this.posY, other.posX, other.posY);
+        if (d <= this.radius){
+            this.color = color(random(200), random(200), random(200));
         }
     }
-}
-
-
-  //circle1 = new Bubble(300,300);
-  //circle2 = new Bubble(250,250);
-
-
-  circle1.display();
-  circle1.update();
-  circle2.display();
-  circle2.update();
-
-function Bubbles() {
-    this.posX = x;
-    this.posY = y;
-    this.radius = 50;
-    this.color = ('lightblue');
-
-  this.display = function(){
-    stroke('white');
-    strokeWeight(2);
-    fill(this.color);
-    ellipse(this.x, this.y, this.radius * 2, this.radius * 2);
-
-  this.changeColor = function(){  //bubble changes color upon collision
-    this.color = color(random(200), random(200), random(200));
-  }
-}
-
-  this.update = function(){
-    this.x = this.x + random(-1, 1);
-    this.y = this.y + random(-1, 1);
-  }
-if (d < circle1.r + circle2.r){
-  circle1.changeColor();
-  circle2.changeColor();
-}
+	// if (d < circle1.radius + circle2.radius) {
+	// 	circle1.changeColor();
+	// 	circle2.changeColor();
+	// }
 
 }

@@ -1,4 +1,4 @@
-### Homework 9 Responses
+### Homework 10 Responses
 
 
 
@@ -15,4 +15,4 @@ Just like I mentioned in the previous question, I went simple so that I could ex
 My sketch started with my previous sketch of the balloon, but I just wanted to concentrate on the array and functions without a big code in my way.
 
 #### 5
-I haven't helped any classmates this week but I have got in contact with my actual assigned TA for future support.
+I haven't helped any classmates this week but I have got in contact with my actual assigned TA for future support. This particular code had a 404 error and I was not able to get help until December 12 from TA Quinn Bruderer. Now my product is fixed and beautiful.
